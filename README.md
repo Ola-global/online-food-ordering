@@ -87,7 +87,3 @@ Run the automated test suite:
 ```bash
 npm test
 ```
-
-## Project Status
-
-Backend development is ongoing. The API is designed to support integration with a web or mobile frontend.
