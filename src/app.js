@@ -12,6 +12,13 @@ import ownerOrderRoutes from './routes/ownerOrderRoutes.js';
 
 const app = express();
 
+app.get("/", (req, res) => {
+  res.status(200).json({
+    success: true,
+    message: "Online Food Ordering API is running",
+  });
+});
+
 // parse JSON bodies
 app.use(express.json());
 
