@@ -1,23 +1,35 @@
 # Online Food Ordering Platform
 
-An online food ordering platform designed to connect customers with restaurants and simplify the process of browsing food, placing orders, and making payments.
+A collaborative backend project for an online food ordering platform that connects customers with restaurants and supports food ordering and payment operations.
 
 ## Overview
 
-This project is a collaborative software development project focused on building the backend infrastructure for an online food ordering platform.
+The application provides backend services for user management, authentication, restaurant operations, menu management, cart management, order processing, and payments.
 
-It provides APIs for handling user authentication, restaurant operations, food menus, shopping carts, orders, and payment processing.
+## Key Features
 
-## Features
-
-- User registration and authentication
-- Role-based access control
+- User registration and login
+- JWT-based authentication
+- Role-based access control for customers, restaurant owners, and admins
 - Customer profile management
-- Restaurant and menu management
+- Password change functionality
+- Restaurant and menu operations
 - Shopping cart management
-- Food order processing
-- Payment integration with Paystack
-- Request validation and error handling
+- Order processing
+- Paystack payment integration
+- Input validation and error handling
+
+## My Contributions
+
+My contributions focused primarily on authentication, authorization, and customer account management.
+
+- Built the User model with bcrypt password hashing.
+- Implemented user registration and login using JWT authentication.
+- Developed token verification and role-based middleware for customers, restaurant owners, and admins.
+- Implemented customer profile and password-change endpoints.
+- Added input validation across authentication routes.
+- Used Git branches and pull requests to manage contributions.
+- Tested API endpoints and authentication flows using Postman.
 
 ## Tech Stack
 
@@ -25,6 +37,7 @@ It provides APIs for handling user authentication, restaurant operations, food m
 - Express.js
 - MongoDB
 - JWT
+- bcrypt
 - Cloudinary
 - Paystack
 
@@ -56,7 +69,7 @@ It provides APIs for handling user authentication, restaurant operations, food m
    npm install
    ```
 
-4. Create your environment file using `.env.example` and configure the required variables.
+4. Create a `.env` file using `.env.example` and configure the required environment variables.
 
 5. Start the development server:
 
@@ -64,7 +77,7 @@ It provides APIs for handling user authentication, restaurant operations, food m
    npm run dev
    ```
 
-   For production:
+   To start the production server:
 
    ```bash
    npm start
@@ -74,11 +87,11 @@ It provides APIs for handling user authentication, restaurant operations, food m
 
 The application requires environment variables for database connectivity, authentication, and Cloudinary configuration.
 
-Paystack credentials are also required for payment processing.
+Paystack credentials are required for payment processing.
 
-Refer to `.env.example` for the required configuration.
+Refer to `.env.example` for the required variable names and configuration details.
 
-**Note:** Keep all secret keys and database credentials private. Never expose them in frontend code or commit your `.env` file.
+**Security:** Do not commit your `.env` file or expose secret keys in frontend code.
 
 ## Testing
 
@@ -87,3 +100,5 @@ Run the automated test suite:
 ```bash
 npm test
 ```
+
+API endpoints were also tested using Postman.
